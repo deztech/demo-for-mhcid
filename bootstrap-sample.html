@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="bootstrap-sample.css">
+
+    <!-- My Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-toggleable-sm bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    MENU <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" data-toggle="tab" href="#welcome">Bootstrap Sample 
+                    <span class="hidden-sm-up">(XS View)</span>
+                    <span class="hidden-xs-down hidden-md-up">(SM View)</span>
+                    <span class="hidden-sm-down hidden-lg-up">(MD View)</span>
+                    <span class="hidden-md-down hidden-xl-up">(LG View)</span>
+                    <span class="hidden-lg-down">(XL View)</span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" role="tab" data-toggle="tab" href="#welcome">Welcome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" role="tab" data-toggle="tab" href="#grid">Grid System</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="tab-content">
+                <div class="tab-pane active" id="welcome" role="tabpanel">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Welcome to My Bootstrap Sample</h1>
+                        <p class="lead">Select the Grid System above option to learn the key benefit of using Bootstrap for easy positioning of elements.</p>
+                        <hr class="my-4">
+                        <p>This welcome content uses the <a href="https://v4-alpha.getbootstrap.com/components/jumbotron/" target="_blank">Bootstrap Jumbotron</a> component.</p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="grid" role="tabpanel">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Grid System</h1>
+                        <p class="lead">Here is a basic grid example, but you can learn more about the <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">Bootstrap Grid System</a> online.</p>
+                        <hr class="my-4">
+                        <h2>lg+ columns</h2>
+                        <div class="alert alert-warning hidden-lg-up" role="alert">
+                            <strong>Note:</strong> These lg+ columns collapse for md, sm, and xs views.
+                        </div>
+                        <div class="row sample-row">
+                            <div class="col-lg-4">col-lg-4: 4/12ths column for lg+ <span class="hidden-lg-up">(collapses for md down)</span></div>
+                            <div class="col-lg-4">col-lg-4: 4/12ths column for lg+ <span class="hidden-lg-up">(collapses for md down)</span></div>
+                            <div class="col-lg-4">col-lg-4: 4/12ths column for lg+ <span class="hidden-lg-up">(collapses for md down)</span></div>
+                        </div>
+                        <div class="row sample-row">
+                            <div class="col-lg-3">col-lg-3: 3/12ths column for lg+ <span class="hidden-lg-up">(collapses for md down)</span></div>
+                            <div class="col-lg-9">col-lg-9: 9/12ths column for lg+ <span class="hidden-lg-up">(collapses for md down)</span></div>
+                        </div>
+                        <hr class="my-4">
+                        <h2>md+ columns</h2>
+                        <div class="alert alert-warning hidden-md-up" role="alert">
+                            <strong>Note:</strong> These md+ columns collapse for sm, and xs views.
+                        </div>
+                        <div class="row sample-row">
+                            <div class="col-md-6">col-md-6: 50% (6 of 12) columns for md+</div>
+                            <div class="col-md-6">col-md-6: 50% (6 of 12) columns for md+</div>
+                        </div>
+                        <div class="row sample-row">
+                            <div class="col-md-4">col-md-4: ~33% (4 of 12) columns for md+</div>
+                            <div class="col-md-4">col-md-4: ~33% (4 of 12) columns for md+</div>
+                            <div class="col-md-4">col-md-4: ~33% (4 of 12) columns for md+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="container">
+            <div class="row">
+                <div class="col-12 text-center">By Aaron Soto</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        //Adapted for navbar use from: http://stackoverflow.com/questions/19814481/linking-to-a-bootstrap-tab-from-outside-how-to-set-the-tab-to-active
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = this.href.split('#');
+            $('.navbar a').filter('[href="#' + target[1] + '"]').tab('show');
+        })
+    </script>
+</body>
+</html>
