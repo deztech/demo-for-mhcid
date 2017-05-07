@@ -2,7 +2,11 @@
     font-family: 'Oswald', sans-serif;
 }
 
+.nav-item .active {
+    border-bottom: 1px solid #666;
+}
+
 .sample-row > div {
-    background-color:#fff;
-    border:1px solid #333;
+    background-color: #fff;
+    border: 1px solid #333;
 }

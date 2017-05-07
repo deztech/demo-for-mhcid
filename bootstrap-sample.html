@@ -22,7 +22,7 @@
                     MENU <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand" data-toggle="tab" href="#welcome">Bootstrap Sample 
+                <a class="navbar-brand OutsideTabLink" data-toggle="tab" href="#welcome">Bootstrap Sample 
                     <span class="hidden-sm-up">(XS View)</span>
                     <span class="hidden-xs-down hidden-md-up">(SM View)</span>
                     <span class="hidden-sm-down hidden-lg-up">(MD View)</span>
@@ -47,9 +47,17 @@
                 <div class="tab-pane active" id="welcome" role="tabpanel">
                     <div class="jumbotron">
                         <h1 class="display-4">Welcome to My Bootstrap Sample</h1>
-                        <p class="lead">Select the Grid System above option to learn the key benefit of using Bootstrap for easy positioning of elements.</p>
+                        <p class="lead">This page shows a few Bootstrap 4 features and components.</p>
                         <hr class="my-4">
-                        <p>This welcome content uses the <a href="https://v4-alpha.getbootstrap.com/components/jumbotron/" target="_blank">Bootstrap Jumbotron</a> component.</p>
+                        <p>This welcome content uses the <a href="https://v4-alpha.getbootstrap.com/components/jumbotron/" target="_blank">Bootstrap Jumbotron</a> and <a href="https://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Button</a> components as well as a <a href="https://v4-alpha.getbootstrap.com/content/images/" target="_blank">Responsive Image</a>.</p>
+                        <div class="row">
+                            <div class="col-lg-4 text-center">
+                                <a class="btn btn-primary btn-lg OutsideTabLink" role="button" data-toggle="tab" href="#grid">View Grid System Sample</a>
+                            </div>
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="https://i.ytimg.com/vi/tX_4HTQ6Pgc/maxresdefault.jpg" alt="Bootstrap 4 Grid System" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane" id="grid" role="tabpanel">
@@ -90,7 +98,7 @@
         </main>
         <footer class="container">
             <div class="row">
-                <div class="col-12 text-center">By Aaron Soto</div>
+                <div class="col-12 text-center">By Aaron Soto for UC Irvine's MHCID Program</div>
             </div>
         </footer>
     </div>
@@ -100,11 +108,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script>
-        //Adapted for navbar use from: http://stackoverflow.com/questions/19814481/linking-to-a-bootstrap-tab-from-outside-how-to-set-the-tab-to-active
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            var target = this.href.split('#');
-            $('.navbar a').filter('[href="#' + target[1] + '"]').tab('show');
-        })
+        //Adapted from: http://stackoverflow.com/questions/19625211/bootstrap-linking-to-a-tab-with-an-url
+        $(function () {
+            $('.OutsideTabLink').click(function (e) {
+                e.preventDefault();
+                $('a[href="' + $(this).attr('href') + '"]').tab('show');
+            })
+        });
     </script>
 </body>
 </html>
